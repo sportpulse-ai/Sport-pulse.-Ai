@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SportPulse AI</title>
+  <style>
+    body{margin:0;font-family:Arial,sans-serif;background:#0b1020;color:#fff}
+    .wrap{max-width:700px;margin:0 auto;padding:16px}
+    .card{background:#121a33;border:1px solid #233055;border-radius:16px;padding:14px;margin:12px 0}
+    .top{display:flex;justify-content:space-between;align-items:center}
+    .btn{background:#ff4d6d;border:none;color:#fff;padding:10px 12px;border-radius:10px}
+    .row{display:flex;gap:10px;flex-wrap:wrap}
+    .pill{background:#1a2550;padding:8px 10px;border-radius:999px;font-size:12px}
+    .match{background:#182449;border-radius:14px;padding:12px;margin-top:10px}
+    .small{color:#9aa6c7;font-size:12px}
+    .tabs,.chips{display:flex;gap:8px;overflow:auto;padding:8px 0}
+    .tab,.chip{background:#1a2550;color:#fff;border:none;border-radius:999px;padding:10px 12px}
+    .active{background:#ff4d6d}
+    .score{font-size:26px;font-weight:bold}
+    .footerbar{position:fixed;left:0;right:0;bottom:0;background:#0b1020;padding:10px 16px;border-top:1px solid #233055}
+    .slipitem{display:flex;justify-content:space-between;background:#182449;padding:10px;border-radius:12px;margin-top:8px}
+    .chatbox{height:180px;overflow:auto;background:#0f1730;padding:10px;border-radius:12px}
+    input,select{width:100%;padding:10px;border-radius:10px;border:1px solid #233055;background:#0f1730;color:#fff}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card top">
+      <div>
+        <h2 style="margin:0">SportPulse AI</h2>
+        <div class="small">Football live scores + betting analysis</div>
+      </div>
+      <div class="pill">12:00 daily refresh</div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active">Today</button>
+      <button class="tab">Tomorrow</button>
+      <button class="tab">Weekend</button>
+      <button class="tab">Saved</button>
+    </div>
+
+    <div class="chips">
+      <button class="chip active">All</button>
+      <button class="chip">Live</button>
+      <button class="chip">Upcoming</button>
+      <button class="chip">EPL</button>
+      <button class="chip">Over 2.5</button>
+      <button class="chip">BTTS</button>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">Recommended games</h3>
+      <div class="row">
+        <select><option>Safe odds</option><option>Medium odds</option><option>High odds</option></select>
+        <select><option>All events</option><option>Today</option><option>Tomorrow</option><option>Weekend</option></select>
+      </div>
+      <button class="btn" style="margin-top:10px;width:100%">Show recommendations</button>
+      <div class="match">
+        <div class="small">EPL • LIVE</div>
+        <div class="row" style="justify-content:space-between;align-items:center">
+          <div>Arsenal</div><div class="score">2-1</div><div>Chelsea</div>
+        </div>
+        <div class="small">Confidence: 78%</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">Live score board</h3>
+      <div class="match">
+        <div class="small">EPL • 18:30</div>
+        <div class="row" style="justify-content:space-between;align-items:center">
+          <div>Man City</div><div class="score">-</div><div>Liverpool</div>
+        </div>
+      </div>
+      <div class="match">
+        <div class="small">La Liga • Tomorrow 20:00</div>
+        <div class="row" style="justify-content:space-between;align-items:center">
+          <div>Real Madrid</div><div class="score">-</div><div>Barcelona</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">AI analysis</h3>
+      <div class="small">Tap a match later to see win, draw, over/under, BTTS, and safer market ideas.</div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">Saved games</h3>
+      <div class="small">No saved games yet.</div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">Bet builder</h3>
+      <div class="grid2">
+        <input placeholder="Target odds e.g. 50" />
+        <input placeholder="Stake ₦" value="100" />
+      </div>
+      <button class="btn" style="margin-top:10px;width:100%">Build accumulator</button>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">AI chat coach</h3>
+      <div class="chatbox">
+        <div class="small">Ask me to analyze a match or suggest safer markets.</div>
+      </div>
+      <input style="margin-top:10px" placeholder="Type your question..." />
+      <button class="btn" style="margin-top:10px;width:100%">Send</button>
+    </div>
+  </div>
+
+  <div class="footerbar small">SportPulse AI • mobile-friendly football website</div>
+</body>
+</html>
